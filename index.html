@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Streamer.bot Text Overlay</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <img id="rotating-img" src="https://assets.clevelandclinic.org/transform/40f5393d-e6d3-4968-90f2-cbd894b67779/wholeGrainProducts-842797430-770x533-1_jpg">
+    <img id="bouncing-img" src="EVA.png">
+
+    <model-viewer
+        src="https://raw.githubusercontent.com/orrinrhodes/w98/refs/heads/main/models/tyrannosaurus_rex.glb"
+        auto-rotate
+        disable-zoom
+        disable-pan
+        disable-tap>
+    </model-viewer>
+
+    <div id="typewriter">Stream Starting...</div>
+
+    <div id="text-container">Waiting for Streamer.bot...</div>
+
+    <script src="index.js"></script>
+    <script type="module"
+        src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js">
+    </script>
+</body>
+</html>
