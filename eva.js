@@ -1,36 +1,3 @@
-//3d spin
-const viewer = document.querySelector("model-viewer");
-let angle = 0;
-
-function spin() {
-    angle += 1;
-    viewer.cameraOrbit = `${angle}deg 90deg 2.5m`;
-    requestAnimationFrame(spin);
-};
-
-spin();
-
-
-//stream starting
-const textFile = 'streamText.txt'; 
-async function updateText() {
-    try {
-        const response = await fetch(textFile + '?t=' + Date.now());
-        if (response.ok) {
-            const newText = await response.text();
-            const el = document.getElementById('text-container');
-            if (el.innerText !== newText) {
-                el.innerText = newText;
-            }
-        }
-    } catch (err) {
-        console.error("Error reading text file:", err);
-    };
-};
-
-setInterval(updateText, 1000);
-
-
 //DVD bounce
 const speed = 5;
 const updateInterval = 1000 / 60;

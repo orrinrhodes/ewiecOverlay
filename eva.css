@@ -1,0 +1,50 @@
+body {
+    background-color: transparent;
+    margin: 0;
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#rotating-img {
+    max-width: 400px; 
+    max-height: 400px;
+
+    animation-name: rockBackAndForth;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
+    }
+
+    @keyframes rockBackAndForth {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-15deg);
+    }
+    75% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#bouncing-img {
+    max-width: 300px;
+    max-height: 300px;
+    position: absolute;
+    z-index: 10000;
+    
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
+    
+    top: 200px;
+    left: 200px;
+}
