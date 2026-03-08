@@ -1,0 +1,54 @@
+starting {
+    background-color: transparent;
+    margin: 0;
+    width: 1920px;
+    height: 1080px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    overflow: hidden;
+}
+
+#typewriter {
+    margin-top: 120px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 64px;
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+
+    background: linear-gradient(to bottom, #d67a3a 0%, #ff8c42 40%, #e64a19 100%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.5));
+    /* text-shadow: 4px 4px 20px rgba(0,0,0,0.6); */
+    /* -webkit-text-stroke: .5px black; */
+
+    width: 19ch; 
+    
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid orange;
+    
+    animation: 
+        typing 3.5s steps(18) infinite,
+        blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    0% { width: 0 }
+    70% { width: 19ch } 
+    90% { width: 19ch }
+    100% { width: 0 }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #ff8c42 }
+}
