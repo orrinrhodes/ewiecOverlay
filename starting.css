@@ -24,7 +24,9 @@ starting {
     background-clip: text;
     color: transparent;
 
-    filter: drop-shadow(4px 4px 20px rgba(0, 0, 0, 0.5));
+    filter:
+        drop-shadow(2px 2px 0 black)
+        drop-shadow(4px 4px 5px rgba(0,0,0,0.6));
     /* text-shadow: 4px 4px 20px rgba(0,0,0,0.6); */
     /* -webkit-text-stroke: .5px black; */
 
